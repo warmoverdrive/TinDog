@@ -5,33 +5,42 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3.5rem;
-  line-height: 1.5;
-  font-weight: 900;
-}
-
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  font-weight: 700;
+  text-align: center;
 }
 
 p {
   color: #8f8f8f;
 }
 
-.container-fluid {
-  padding: 3% 15%;
+/* HEADINGS */
+
+.big-heading {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
 }
 
-#title {
+.section-heading {
+  font-weight: 700;
+  font-size: 3vmax;
+  line-height: 1.5;
+}
+
+/* CONTAINERS */
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* SECTIONS */
+
+.colored-section {
   background-color: #ff4c68;
   color: white;
+}
+
+.white-section {
+  background-color: white;
 }
 
 /* NAVIGATION BAR */
@@ -55,27 +64,35 @@ p {
   font-weight: 300;
 }
 
-/* DOWNLOAD BUTTONS */
+/* TITLE SECTION */
+
+/* the space here is important to overwrite 
+for this id section. This is a parent-child
+linking relationship. */
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
 
 .download-btn {
   margin: 5% 3% 5% 0;
 }
 
-/* TITLE IMAGE */
-
 .iphone {
+  width: 22%;
+  right: 20%;
   transform: rotate(25deg);
-  width: 60%;
+  position: absolute;
 }
 
 /* FEATURES SECTION */
 
 #features {
-  padding: 7% 15%;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-box {
-  text-align: center;
   padding: 5%;
 }
 
@@ -86,4 +103,86 @@ p {
 
 .feature-icon:hover {
   color: #ff4c68;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* TESTIMONIALS SECTION */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* PRESS SECTION */
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  margin: 20px 20px 50px;
+  width: 15%;
+}
+
+/* PRICING SECTION */
+
+#pricing {
+  padding: 100px;
+}
+
+.pricing-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.price-text {
+  font-weight: 700;
+  font-size: 3vmax;
+  line-height: 1.5;
+}
+
+.pricing-col {
+  padding: 3% 2%;
+}
+
+/* FOOTER SECTION */
+
+#footer {
+  padding: 7% 0 3%;
+}
+
+.footer-icon,
+.footer-icon:link {
+  padding: 10px 10px 20px;
+  color: inherit;
+  text-decoration: inherit;
+}
+.footer-icon:hover {
+  color: #8f8f8f;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 992px) {
+  #title {
+    text-align: center;
+  }
+  .iphone {
+    position: static;
+    transform: rotate(0);
+    width: 60%;
+  }
 }
