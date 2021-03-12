@@ -26,6 +26,12 @@ p {
   line-height: 1.5;
 }
 
+.feature-title {
+  font-size: 2vmax;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
 /* CONTAINERS */
 
 .container-fluid {
@@ -51,7 +57,7 @@ p {
 
 .navbar-brand {
   font-family: "Ubuntu", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.5vmax;
   font-weight: bold;
 }
 
@@ -105,12 +111,6 @@ linking relationship. */
   color: #ff4c68;
 }
 
-.feature-title {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  font-weight: 700;
-}
-
 /* TESTIMONIALS SECTION */
 
 #testimonials {
@@ -125,33 +125,19 @@ linking relationship. */
 
 /* PRESS SECTION */
 
-#press {
+#press .container-fluid {
   background-color: #ef8172;
-  padding-bottom: 3%;
+  padding: 0 10% 3%;
 }
 
 .press-logo {
-  margin: 20px 20px 50px;
-  width: 15%;
+  padding: 3%;
 }
 
 /* PRICING SECTION */
 
 #pricing {
   padding: 100px;
-}
-
-.pricing-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  font-weight: 700;
-}
-
-.price-text {
-  font-weight: 700;
-  font-size: 3vmax;
-  line-height: 1.5;
 }
 
 .pricing-col {
@@ -177,12 +163,54 @@ linking relationship. */
 /* MEDIA QUERIES */
 
 @media (max-width: 992px) {
-  #title {
+  p {
+    font-size: 2em;
+  }
+
+  .nav-link {
+    font-size: 2em;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 2.5rem;
+  }
+
+  .big-heading {
+    font-size: 5rem;
+  }
+
+  .download-btn {
+    font-size: 2.5rem;
+    border-width: 0.25rem;
+  }
+
+  #title .container-fluid {
     text-align: center;
   }
+
   .iphone {
     position: static;
     transform: rotate(0);
     width: 60%;
+  }
+
+  .carousel-item {
+    font-size: 1.75em;
+  }
+
+  .pricing-title {
+    font-size: 2.5rem;
+  }
+
+  #pricing .btn-large {
+    font-size: 2.5rem;
+  }
+
+  .press-logo {
+    padding: 3% 10% 3%;
+  }
+
+  .footer-icon {
+    font-size: 2.5rem;
   }
 }
